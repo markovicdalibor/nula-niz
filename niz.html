@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>niz nula</title>
+</head>
+<body>
+    <script>
+        let niz = [0,1,2,3,0,0,4,0,0,0,5,6,0,0,0,0,7,0,0,0];
+        document.write(`Pocetni niz: ${niz}<hr>`)
+        let br=0;
+        for(let i = niz.length-1;i>=0;i--){
+            if(niz[i]==0){
+                br++;
+            }
+            else{
+                br=0;
+            }
+            if(br==2){
+                niz.splice(i,2);
+                br=0;
+            }  
+        }
+        document.write(`Sredjeni niz: ${niz}`)
+    </script>
+</body>
+</html>
